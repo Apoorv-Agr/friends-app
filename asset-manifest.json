@@ -1,25 +1,30 @@
 {
   "files": {
-    "main.css": "/friends-app/static/css/main.4c06bf00.chunk.css",
-    "main.js": "/friends-app/static/js/main.a86b7fba.chunk.js",
-    "main.js.map": "/friends-app/static/js/main.a86b7fba.chunk.js.map",
-    "runtime-main.js": "/friends-app/static/js/runtime-main.2e23c52d.js",
-    "runtime-main.js.map": "/friends-app/static/js/runtime-main.2e23c52d.js.map",
-    "static/css/2.a95be28f.chunk.css": "/friends-app/static/css/2.a95be28f.chunk.css",
-    "static/js/2.2d721ccb.chunk.js": "/friends-app/static/js/2.2d721ccb.chunk.js",
-    "static/js/2.2d721ccb.chunk.js.map": "/friends-app/static/js/2.2d721ccb.chunk.js.map",
-    "static/js/3.89bc3242.chunk.js": "/friends-app/static/js/3.89bc3242.chunk.js",
-    "static/js/3.89bc3242.chunk.js.map": "/friends-app/static/js/3.89bc3242.chunk.js.map",
+    "main.css": "/friends-app/static/css/main.afe76209.chunk.css",
+    "main.js": "/friends-app/static/js/main.2501dd03.chunk.js",
+    "main.js.map": "/friends-app/static/js/main.2501dd03.chunk.js.map",
+    "runtime-main.js": "/friends-app/static/js/runtime-main.643e76c3.js",
+    "runtime-main.js.map": "/friends-app/static/js/runtime-main.643e76c3.js.map",
+    "static/js/2.ccfed4e2.chunk.js": "/friends-app/static/js/2.ccfed4e2.chunk.js",
+    "static/js/2.ccfed4e2.chunk.js.map": "/friends-app/static/js/2.ccfed4e2.chunk.js.map",
+    "static/js/3.89af8bf3.chunk.js": "/friends-app/static/js/3.89af8bf3.chunk.js",
+    "static/js/3.89af8bf3.chunk.js.map": "/friends-app/static/js/3.89af8bf3.chunk.js.map",
     "index.html": "/friends-app/index.html",
-    "static/css/2.a95be28f.chunk.css.map": "/friends-app/static/css/2.a95be28f.chunk.css.map",
-    "static/css/main.4c06bf00.chunk.css.map": "/friends-app/static/css/main.4c06bf00.chunk.css.map",
-    "static/js/2.2d721ccb.chunk.js.LICENSE.txt": "/friends-app/static/js/2.2d721ccb.chunk.js.LICENSE.txt"
+    "static/css/main.afe76209.chunk.css.map": "/friends-app/static/css/main.afe76209.chunk.css.map",
+    "static/js/2.ccfed4e2.chunk.js.LICENSE.txt": "/friends-app/static/js/2.ccfed4e2.chunk.js.LICENSE.txt",
+    "static/media/asc-sort-active.a2398c2f.ico": "/friends-app/static/media/asc-sort-active.a2398c2f.ico",
+    "static/media/asc-sort.2e3797d9.ico": "/friends-app/static/media/asc-sort.2e3797d9.ico",
+    "static/media/desc-sort-active.2485d125.ico": "/friends-app/static/media/desc-sort-active.2485d125.ico",
+    "static/media/desc-sort.a3c5843f.ico": "/friends-app/static/media/desc-sort.a3c5843f.ico",
+    "static/media/friendsListStyle.module.css": "/friends-app/static/media/search-icon.6d280c8f.ico",
+    "static/media/star-16-grey.1c300d50.ico": "/friends-app/static/media/star-16-grey.1c300d50.ico",
+    "static/media/star-16.1cbefae3.ico": "/friends-app/static/media/star-16.1cbefae3.ico",
+    "static/media/trash-9-16-Blue.7a385d9f.ico": "/friends-app/static/media/trash-9-16-Blue.7a385d9f.ico"
   },
   "entrypoints": [
-    "static/js/runtime-main.2e23c52d.js",
-    "static/css/2.a95be28f.chunk.css",
-    "static/js/2.2d721ccb.chunk.js",
-    "static/css/main.4c06bf00.chunk.css",
-    "static/js/main.a86b7fba.chunk.js"
+    "static/js/runtime-main.643e76c3.js",
+    "static/js/2.ccfed4e2.chunk.js",
+    "static/css/main.afe76209.chunk.css",
+    "static/js/main.2501dd03.chunk.js"
   ]
 }
