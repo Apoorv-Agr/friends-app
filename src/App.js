@@ -2,8 +2,6 @@
 import './App.css';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-// import FriendsListComponent from './components/FriendsListComponent';
-// import AddFriendComponent from './components/AddFriendComponent';
 import HeaderComponent from './components/HeaderComponent';
 import CustomFriendListComponent from './components/CustomFriendListComponent';
 

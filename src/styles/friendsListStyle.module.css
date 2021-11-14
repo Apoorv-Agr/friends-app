@@ -122,7 +122,7 @@ input[type="text"]:focus {
 }
 
 .pagination a.active {
-  background-color: #4caf50;
+  background-color: #40a9ff;
   color: white;
 }
 
@@ -159,7 +159,7 @@ input[type="text"]:focus {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04aa6d;
+  background-color: #40a9ff;
   color: white;
 }
 

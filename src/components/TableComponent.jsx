@@ -1,0 +1,92 @@
+import React from "react";
+import css from "../styles/friendsListStyle.module.css";
+import favStar from "../images/star-16.ico";
+import nonFavStar from "../images/star-16-grey.ico";
+import trashIcon from "../images/trash-9-16 -Blue.ico";
+import CustomLoaderComponent from "./CustomLoaderComponent";
+
+const TableComponent = (props) => {
+  const {
+    showLoader,
+    currentFriendsList,
+    removeFavFriendActionProps,
+    addFavFriendActionProps,
+    onDeleteFriendClick,
+  } = props;
+  return (
+    <>
+      <table id="friendsList" className={css.friendsListTable}>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Favourite</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          {(() => {
+            if (!showLoader) {
+              return (
+                currentFriendsList &&
+                currentFriendsList.map((record) => {
+                  const favIcon =
+                    record.isFavorite === true ? (
+                      <button
+                        className={css.favBtn}
+                        onClick={() => {
+                          removeFavFriendActionProps(record);
+                        }}
+                      >
+                        <img src={favStar} alt="fav_enabled_icon" />
+                      </button>
+                    ) : (
+                      <button
+                        className={css.favBtn}
+                        onClick={() => {
+                          addFavFriendActionProps(record);
+                        }}
+                      >
+                        <img src={nonFavStar} alt="non_fav_enabled_icon" />
+                      </button>
+                    );
+
+                  return (
+                    <tr key={`${record.name}#${record.id}`}>
+                      <td>
+                        <h3>{record.name}</h3>
+                        <p>is your friend</p>
+                      </td>
+                      <td>{favIcon}</td>
+                      <td>
+                        <button
+                          className={css.favBtn}
+                          onClick={() => {
+                            onDeleteFriendClick(record);
+                          }}
+                        >
+                          <img src={trashIcon} alt="trashIcon" />
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })
+              );
+            } else {
+              return (
+                <tr key={`Loader`}>
+                  <td></td>
+                  <td>
+                    <CustomLoaderComponent />
+                  </td>
+                  <td></td>
+                </tr>
+              );
+            }
+          })()}
+        </tbody>
+      </table>
+    </>
+  );
+};
+
+export default TableComponent;
