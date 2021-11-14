@@ -1,0 +1,272 @@
+.appHeader {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  padding: 12px 20px 12px 10px;
+  display: inline-block;
+}
+
+input[type="text"]:focus {
+  border: 2px solid #7a7a7a;
+}
+
+.addFriendInput {
+  margin: 5px;
+  width: 20.2% !important;
+  transition: width 0.4s ease-in-out;
+}
+
+.addFriendInput:focus {
+  width: 80% !important;
+}
+
+.searchInput {
+  display: inline-block;
+  margin: 5px;
+  width: 20.2% !important;
+  background-image: url("../images/search-icon.ico");
+  background-position: 10px 13px;
+  background-repeat: no-repeat;
+  padding-left: 33px !important;
+  transition: width 0.4s ease-in-out;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  padding: 12px 20px 12px 10px;
+}
+
+.searchInput:focus {
+  width: 80% !important;
+}
+.searchInput.close:focus {
+  width: 20% !important;
+}
+
+.marginTop10 {
+  margin-top: 10px;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+.favBtn {
+  line-height: 1.5715;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  height: 32px;
+  padding: 4px 15px;
+  font-size: 14px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+}
+
+/* Darker background on mouse-over */
+.favBtn:hover {
+  border: 1px solid #40a9ff !important;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 2s linear infinite;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  left: 10%;
+  position: relative;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pagination {
+  display: inline-block;
+  float: right;
+  margin: 5px;
+  /* border: 1px solid #ddd; */
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.pagination a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.friendsListTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.friendsListTable td,
+.friendsListTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.friendsListTable td {
+  border: none;
+}
+
+/* .friendsListTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+} */
+
+.friendsListTable tr:hover {
+  background-color: #ddd;
+}
+
+.friendsListTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+.modal button:hover {
+  opacity: 1;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.cancelBtn,
+.deleteBtn {
+  /* float: left; */
+  width: 30%;
+  display: inline-block;
+  margin: 5px 10px;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  font-weight: bold;
+}
+
+/* Add a color to the cancel button */
+.cancelBtn {
+  background-color: #ccc;
+  color: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.85);
+}
+.cancelBtn:hover {
+  color: #40a9ff;
+  border: 1px solid #40a9ff;
+  background: #fefefe;
+}
+
+.deleteBtn:hover {
+  color: #fff;
+  border: 1px solid #40a9ff;
+  background: #40a9ff;
+}
+
+/* Add a color to the delete button */
+.deleteBtn {
+  background-color: #1890ff;
+  border: 1px solid #1890ff;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  padding: 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* The Modal (background) */
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.45);
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modalContent {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelBtn,
+  .deleteBtn {
+    width: 100%;
+  }
+}
