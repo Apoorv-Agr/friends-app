@@ -9,8 +9,8 @@ input[type="text"] {
   border-radius: 4px;
   font-size: 16px;
   background-color: white;
-  padding: 12px 20px 12px 10px;
-  display: inline-block;
+  padding: 0px 0px 0px 15px;
+  height: 30px;
 }
 
 input[type="text"]:focus {
@@ -19,7 +19,7 @@ input[type="text"]:focus {
 
 .addFriendInput {
   margin: 5px;
-  width: 20.2% !important;
+  width: 45% !important;
   transition: width 0.4s ease-in-out;
 }
 
@@ -28,20 +28,20 @@ input[type="text"]:focus {
 }
 
 .searchInput {
-  display: inline-block;
   margin: 5px;
-  width: 20.2% !important;
+  width: 45% !important;
   background-image: url("../images/search-icon.ico");
-  background-position: 10px 13px;
+  background-position: 5px;
   background-repeat: no-repeat;
-  padding-left: 33px !important;
+  padding-left: 28px !important;
   transition: width 0.4s ease-in-out;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
   background-color: white;
-  padding: 12px 20px 12px 10px;
+  padding: 0px 0px 0px 0px;
+  height: 30px;
 }
 
 .searchInput:focus {
@@ -62,7 +62,6 @@ input[type="text"]:focus {
 .favBtn {
   line-height: 1.5715;
   position: relative;
-  display: inline-block;
   font-weight: 400;
   white-space: nowrap;
   text-align: center;
@@ -104,17 +103,12 @@ input[type="text"]:focus {
     transform: rotate(360deg);
   }
 }
-
 .pagination {
-  display: inline-block;
-  float: right;
-  margin: 5px;
-  /* border: 1px solid #ddd; */
+  margin: 11px 0px 11px 5px;
 }
 
 .pagination a {
   color: black;
-  float: left;
   padding: 8px 16px;
   text-decoration: none;
   transition: background-color 0.3s;
@@ -135,6 +129,7 @@ input[type="text"]:focus {
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
+  height: 100%;
 }
 
 .friendsListTable td,
@@ -279,4 +274,20 @@ hr {
   .deleteBtn {
     width: 100%;
   }
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-size: 14px;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-size: 14px;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-size: 14px;
 }

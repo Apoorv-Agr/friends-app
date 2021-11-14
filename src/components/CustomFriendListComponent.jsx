@@ -107,12 +107,44 @@ const CustomFriendListComponent = (props) => {
     setIsSortClicked(false);
     setSearchText(e.target.value);
     showLoadingActionProps();
+    setCurrentPage(1);
+    if (searchText) {
+      friendListData.sort(function (a, b) {
+        return a.id - b.id;
+      });
+    } else {
+      friendsList.sort(function (a, b) {
+        return a.id - b.id;
+      });
+    }
     enhancedSearch(e.target.value);
   };
 
   const sortClickedHandler = (orderVal) => {
     setIsSortClicked(true);
     setSortOrder(orderVal);
+    setCurrentPage(1);
+    if (orderVal === "asc") {
+      if (searchText) {
+        friendListData.sort(function (a, b) {
+          return b.isFavorite - a.isFavorite;
+        });
+      } else {
+        friendsList.sort(function (a, b) {
+          return b.isFavorite - a.isFavorite;
+        });
+      }
+    } else {
+      if (searchText) {
+        friendListData.sort(function (a, b) {
+          return a.isFavorite - b.isFavorite;
+        });
+      } else {
+        friendsList.sort(function (a, b) {
+          return a.isFavorite - b.isFavorite;
+        });
+      }
+    }
   };
 
   return (
