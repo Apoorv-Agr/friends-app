@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/friends-app/static/css/main.afe76209.chunk.css",
-    "main.js": "/friends-app/static/js/main.2501dd03.chunk.js",
-    "main.js.map": "/friends-app/static/js/main.2501dd03.chunk.js.map",
+    "main.js": "/friends-app/static/js/main.0f4ed50c.chunk.js",
+    "main.js.map": "/friends-app/static/js/main.0f4ed50c.chunk.js.map",
     "runtime-main.js": "/friends-app/static/js/runtime-main.643e76c3.js",
     "runtime-main.js.map": "/friends-app/static/js/runtime-main.643e76c3.js.map",
     "static/js/2.ccfed4e2.chunk.js": "/friends-app/static/js/2.ccfed4e2.chunk.js",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.643e76c3.js",
     "static/js/2.ccfed4e2.chunk.js",
     "static/css/main.afe76209.chunk.css",
-    "static/js/main.2501dd03.chunk.js"
+    "static/js/main.0f4ed50c.chunk.js"
   ]
 }
