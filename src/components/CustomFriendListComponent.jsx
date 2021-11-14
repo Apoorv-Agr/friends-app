@@ -84,13 +84,23 @@ const CustomFriendListComponent = (props) => {
     setFriendNameToRemove(null);
   };
 
+  useEffect(() => {
+    if (currentFriendsList.length === 0) {
+      if (currentPage >= 1) {
+        setCurrentPage(1);
+      }
+    }
+  }, [currentFriendsList, currentPage]);
+
   const onConfirmationOkClickHandler = () => {
     showLoadingActionProps();
     deleteFriendsActionProps(deleteFriendObj);
+
     setTimeout(() => {
       hideLoaderActionProps();
       setFriendNameToRemove(null);
       setShowConfirmationModal(false);
+      console.log("currentFriendsList : ", currentFriendsList);
     }, 200);
   };
 
