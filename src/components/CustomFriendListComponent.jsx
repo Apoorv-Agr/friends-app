@@ -100,7 +100,7 @@ const CustomFriendListComponent = (props) => {
       hideLoaderActionProps();
       setFriendNameToRemove(null);
       setShowConfirmationModal(false);
-      console.log("currentFriendsList : ", currentFriendsList);
+      
     }, 200);
   };
 
