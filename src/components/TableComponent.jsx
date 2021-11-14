@@ -2,7 +2,11 @@ import React from "react";
 import css from "../styles/friendsListStyle.module.css";
 import favStar from "../images/star-16.ico";
 import nonFavStar from "../images/star-16-grey.ico";
-import trashIcon from "../images/trash-9-16 -Blue.ico";
+import trashIcon from "../images/trash-9-16-Blue.ico";
+import AscIcon from "../images/asc-sort.ico";
+import AscIconActive from "../images/asc-sort-active.ico";
+import DescIconActive from "../images/desc-sort-active.ico";
+import DescIcon from "../images/desc-sort.ico";
 import CustomLoaderComponent from "./CustomLoaderComponent";
 
 const TableComponent = (props) => {
@@ -12,6 +16,9 @@ const TableComponent = (props) => {
     removeFavFriendActionProps,
     addFavFriendActionProps,
     onDeleteFriendClick,
+    sortOrder = "asc",
+    isSortClicked = false,
+    sortClickedHandler,
   } = props;
   return (
     <>
@@ -19,7 +26,66 @@ const TableComponent = (props) => {
         <thead>
           <tr>
             <th>Name</th>
-            <th>Favourite</th>
+            <th>
+              Favourite
+              <span className={css.sortSpan}>
+                {(() => {
+                  if (isSortClicked) {
+                    return (
+                      <>
+                        <img
+                          src={
+                            sortOrder === "asc"
+                              ? `${AscIconActive}`
+                              : `${AscIcon}`
+                          }
+                          alt="AscIcon"
+                          className={css.ascSortIcon}
+                          onClick={() => {
+                            sortClickedHandler("asc");
+                          }}
+                        />
+                        <img
+                          src={
+                            sortOrder === "desc"
+                              ? `${DescIconActive}`
+                              : `${DescIcon}`
+                          }
+                          alt="DescIcon"
+                          className={css.descSortIcon}
+                          onClick={() => {
+                            sortClickedHandler("desc");
+                          }}
+                        />
+                      </>
+                    );
+                  } else {
+                    return (
+                      <>
+                        <img
+                          src={`${AscIcon}`}
+                          alt="AscIcon"
+                          tooltip="sort Asc"
+                          className={css.ascSortIcon}
+                          onClick={() => {
+                            sortClickedHandler("asc");
+                          }}
+                        />
+                        <img
+                          src={`${DescIcon}`}
+                          alt="DescIcon"
+                          tooltip="sort Asc"
+                          className={css.descSortIcon}
+                          onClick={() => {
+                            sortClickedHandler("desc");
+                          }}
+                        />
+                      </>
+                    );
+                  }
+                })()}
+              </span>
+            </th>
             <th>Remove</th>
           </tr>
         </thead>

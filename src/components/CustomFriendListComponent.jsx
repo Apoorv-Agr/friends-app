@@ -24,6 +24,8 @@ const CustomFriendListComponent = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [showConfirmationModal, setShowConfirmationModal] = useState(false);
   const [deleteFriendObj, setFriendNameToRemove] = useState(null);
+  const [sortOrder, setSortOrder] = useState("");
+  const [isSortClicked, setIsSortClicked] = useState(false);
   const {
     showLoadingActionProps,
     getFriendsActionProps,
@@ -37,7 +39,6 @@ const CustomFriendListComponent = (props) => {
 
   useEffect(() => {
     let timer;
-
     if (showLoadingActionProps && getFriendsActionProps) {
       showLoadingActionProps();
       timer = setTimeout(() => {
@@ -103,9 +104,15 @@ const CustomFriendListComponent = (props) => {
 
   const enhancedSearch = _.debounce(filterData, 300);
   const onSearchChange = (e) => {
+    setIsSortClicked(false);
     setSearchText(e.target.value);
     showLoadingActionProps();
     enhancedSearch(e.target.value);
+  };
+
+  const sortClickedHandler = (orderVal) => {
+    setIsSortClicked(true);
+    setSortOrder(orderVal);
   };
 
   return (
@@ -140,6 +147,9 @@ const CustomFriendListComponent = (props) => {
               removeFavFriendActionProps={removeFavFriendActionProps}
               addFavFriendActionProps={addFavFriendActionProps}
               onDeleteFriendClick={onDeleteFriendClick}
+              isSortClicked={isSortClicked}
+              sortOrder={sortOrder}
+              sortClickedHandler={sortClickedHandler}
             />
             <PaginationComponent
               itemsArray={searchText ? friendListData : friendsList}

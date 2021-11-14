@@ -162,6 +162,16 @@ input[type="text"]:focus {
   background-color: #40a9ff;
   color: white;
 }
+.sortSpan {
+  float: right;
+  display: flex;
+}
+.ascSortIcon {
+  cursor: pointer;
+}
+.descSortIcon {
+  cursor: pointer;
+}
 
 .modal button:hover {
   opacity: 1;
